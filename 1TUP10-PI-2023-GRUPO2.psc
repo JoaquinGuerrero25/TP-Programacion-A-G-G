@@ -156,6 +156,29 @@ Proceso TPProgramacionI
 						Mostrar "3 - Rosario - Buenos Aires --- Pasajes vendidos: ",  cantPasajerosRB / 80 * 100 "%"
 						Mostrar "4 - Mar Del Plata - Mendoza --- Pasajes vendidos: ", cantPasajerosMM / 80 * 100 "%"
 				FinSegun
+			"5":
+				Mostrar "a. Cantidad de pasajes vendido por ruta aérea"
+				Mostrar "b. Porcentaje de ventas por ruta aérea"
+				Mostrar "Ingrese una opcion: "
+				leer opcionCinco
+				Mientras Mayusculas(opcionCinco) <> "A" y Mayusculas(opcionCinco) <> "B"
+					Mostrar "opcion incorrecta. ingrese la opcion nuevamente: "
+					leer opcionCinco
+				FinMientras
+				Si Mayusculas(opcionCinco) == "A" Entonces
+					Mostrar "1 - Buenos Aires - Bariloche --- Pasajes vendidos: ", cantPasajerosBB 
+					Mostrar "2 - Buenos Aires - Salta --- Pasajes vendidos: ", cantPasajerosBS 
+					Mostrar "3 - Rosario - Buenos Aires --- Pasajes vendidos: ", cantPasajerosRB 
+					Mostrar "4 - Mar Del Plata - Mendoza --- Pasajes vendidos: " , cantPasajerosMM 
+					Mostrar  ""
+				FinSi
+				Si Mayusculas(opcionCinco) == "B" Entonces
+					Mostrar "1 - Buenos Aires - Bariloche --- Pasajes vendidos:", cantPasajerosBB / 400 * 100 "%"
+					Mostrar "2 - Buenos Aires - Salta --- Pasajes vendidos:", cantPasajerosBS / 400 * 100 "%"
+					Mostrar "3 - Rosario - Buenos Aires --- Pasajes vendidos:",  cantPasajerosRB / 400 * 100 "%"
+					Mostrar "4 - Mar Del Plata - Mendoza --- Pasajes vendidos:", cantPasajerosMM / 400 * 100 "%"
+					Mostrar ""
+				FinSi
 		FinSegun
 	Mientras Que opcionMenu <> "SALIR"
 FinProceso
@@ -166,6 +189,7 @@ SubProceso Menu
 	Mostrar "3 - Buscar pasajero. "
 	Mostrar "4 - Ordenar y mostrar lista. "
 	Mostrar "5 - Listados."
+	Mostrar ""
 	Mostrar "Elija una de las siguientes opciones(Si desea finalizar el programa ingrese salir): "
 FinSubProceso
 
